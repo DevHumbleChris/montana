@@ -22,5 +22,9 @@
     "postcss": "^8.4.12",
     "tailwindcss": "^3.0.23",
     "vite": "^2.8.0"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/DevHumbleChris/montana.git",
+  "author": "DevHumbleChris <dev.humblechris254@gmail.com>",
+  "license": "MIT"
 }
