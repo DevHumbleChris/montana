@@ -9,11 +9,15 @@ const isSidebarOpen = computed(() => {
 });
 
 const openSidebar = () => {
-  console.log(isSidebarOpen);
   store.openSidebar();
 };
 
-const count = ref(0);
+const openMiniMenu = ref(false);
+
+const collapseMiniMenu = () => {
+  openMiniMenu.value = !openMiniMenu.value;
+  console.log("after clicked", openMiniMenu.value);
+};
 </script>
 
 <template>
@@ -21,14 +25,13 @@ const count = ref(0);
     <nav
       class="fixed top-0 left-0 z-20 h-full pb-10 overflow-x-hidden overflow-y-auto transition origin-left transform bg-gray-900 w-60 md:translate-x-0"
       :class="{ '-translate-x-full': !isSidebarOpen, 'translate-x-0': isSidebarOpen }"
-      @click="openSidebar"
     >
       <a href="/" class="flex items-center px-4 py-5">
         <img src="https://kutty.netlify.app/brand/og.png" alt="Kutty Logo" class="w-20" />
       </a>
-      <nav class="text-sm font-medium text-gray-500" aria-label="Main Navigation">
+      <nav class="text-lg font-medium text-gray-500" aria-label="Main Navigation">
         <a
-          class="flex items-center px-4 py-3 transition cursor-pointer group hover:bg-gray-800 hover:text-gray-200"
+          class="flex items-center px-4 py-5 transition cursor-pointer group hover:bg-gray-800 hover:text-gray-200"
           href="#"
         >
           <svg
@@ -44,7 +47,7 @@ const count = ref(0);
           <span>Home</span>
         </a>
         <a
-          class="flex items-center px-4 py-3 transition cursor-pointer group hover:bg-gray-800 hover:text-gray-200"
+          class="flex items-center px-4 py-5 transition cursor-pointer group hover:bg-gray-800 hover:text-gray-200"
           href="#"
         >
           <svg
@@ -63,7 +66,7 @@ const count = ref(0);
           <span>Articles</span>
         </a>
         <a
-          class="flex items-center px-4 py-3 text-gray-200 transition bg-gray-800 cursor-pointer group hover:bg-gray-800 hover:text-gray-200"
+          class="flex items-center px-4 py-5 text-gray-200 transition cursor-pointer group hover:bg-gray-800 hover:text-gray-200"
           href="#"
         >
           <svg
@@ -79,7 +82,7 @@ const count = ref(0);
           <span>Collections</span>
         </a>
         <a
-          class="flex items-center px-4 py-3 transition cursor-pointer group hover:bg-gray-800 hover:text-gray-200"
+          class="flex items-center px-4 py-5 transition cursor-pointer group hover:bg-gray-800 hover:text-gray-200"
           href="#"
         >
           <svg
@@ -97,11 +100,10 @@ const count = ref(0);
           </svg>
           <span>Checklists</span>
         </a>
-        <div x-data="collapse()">
-          <div
-            class="flex items-center justify-between px-4 py-3 transition cursor-pointer group hover:bg-gray-800 hover:text-gray-200"
+        <div>
+          <a
+            class="flex items-center justify-between px-4 py-5 transition cursor-pointer group hover:bg-gray-800 hover:text-gray-200"
             role="button"
-            x-spread="trigger"
           >
             <div class="flex items-center">
               <svg
@@ -119,11 +121,12 @@ const count = ref(0);
               <span>Integrations</span>
             </div>
             <svg
-              :class="{ 'rotate-90': open }"
+              :class="{ 'rotate-90': openMiniMenu }"
               class="shrink-0 w-4 h-4 ml-2 transition transform"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="currentColor"
+              @click="collapseMiniMenu"
             >
               <path
                 fill-rule="evenodd"
@@ -131,8 +134,8 @@ const count = ref(0);
                 clip-rule="evenodd"
               />
             </svg>
-          </div>
-          <div class="mb-4" x-spread="collapse" x-cloak>
+          </a>
+          <div class="mb-4" v-if="openMiniMenu">
             <a
               class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-800 hover:text-gray-200"
               href="#"
@@ -151,7 +154,7 @@ const count = ref(0);
           </div>
         </div>
         <a
-          class="flex items-center px-4 py-3 transition cursor-pointer group hover:bg-gray-800 hover:text-gray-200"
+          class="flex items-center px-4 py-5 transition cursor-pointer group hover:bg-gray-800 hover:text-gray-200"
           href="#"
         >
           <svg
@@ -170,7 +173,7 @@ const count = ref(0);
           <span>Changelog</span>
         </a>
         <a
-          class="flex items-center px-4 py-3 transition cursor-pointer group hover:bg-gray-800 hover:text-gray-200"
+          class="flex items-center px-4 py-5 transition cursor-pointer group hover:bg-gray-800 hover:text-gray-200"
           href="#"
         >
           <svg
