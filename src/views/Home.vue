@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed } from "vue";
 import { useStore } from "../store";
+import Dashboard from "../components/Dashboard.vue";
 
 const store = useStore();
 
@@ -21,7 +22,7 @@ const collapseMiniMenu = () => {
 </script>
 
 <template>
-  <section class="min-h-screen bg-gray-50">
+  <section class="min-h-screen bg-gray-200">
     <nav
       class="fixed top-0 left-0 z-20 h-full pb-10 overflow-x-hidden overflow-y-auto transition origin-left transform bg-gray-900 w-60 md:translate-x-0"
       :class="{ '-translate-x-full': !isSidebarOpen, 'translate-x-0': isSidebarOpen }"
@@ -29,7 +30,10 @@ const collapseMiniMenu = () => {
       <a href="/" class="flex items-center px-4 py-5">
         <img src="https://kutty.netlify.app/brand/og.png" alt="Kutty Logo" class="w-20" />
       </a>
-      <nav class="text-lg font-medium text-gray-500" aria-label="Main Navigation">
+      <nav
+        class="text-lg uppercase font-medium text-gray-500"
+        aria-label="Main Navigation"
+      >
         <a
           class="flex items-center px-4 py-5 transition cursor-pointer group hover:bg-gray-800 hover:text-gray-200"
           href="#"
@@ -194,7 +198,7 @@ const collapseMiniMenu = () => {
     </nav>
     <div class="ml-0 transition md:ml-60">
       <header
-        class="sticky top-0 right-0 left-0 flex items-center justify-between w-full px-4 h-14"
+        class="sticky bg-gray-200 shadow-xl top-0 right-0 left-0 flex items-center justify-between w-full px-4 h-14"
       >
         <button class="block btn btn-light-secondary md:hidden" @click="openSidebar">
           <span class="sr-only">Menu</span>
@@ -253,7 +257,7 @@ const collapseMiniMenu = () => {
       </header>
       <div class="p-4">
         <!-- Add content here, remove div below -->
-        <div class="-mt-2 border-4 border-dashed rounded h-96"></div>
+        <Dashboard />
       </div>
     </div>
 
