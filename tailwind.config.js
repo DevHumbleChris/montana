@@ -9,5 +9,6 @@ module.exports = {
   plugins: [
     require("kutty"),
     require("@tailwindcss/typography"),
+    require("daisyui")
   ],
 }
