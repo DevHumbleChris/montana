@@ -198,7 +198,7 @@ const collapseMiniMenu = () => {
     </nav>
     <div class="ml-0 transition md:ml-60">
       <header
-        class="sticky bg-gray-200 shadow-xl top-0 right-0 left-0 flex items-center justify-between w-full px-4 h-14"
+        class="sticky z-10 bg-gray-200 shadow-xl top-0 right-0 left-0 flex items-center justify-between w-full px-4 h-14"
       >
         <button class="block btn btn-light-secondary md:hidden" @click="openSidebar">
           <span class="sr-only">Menu</span>

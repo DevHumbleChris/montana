@@ -3,11 +3,12 @@
 <template>
   <main>
     <!-- Content header -->
-    <h1
-      class="flex items-center justify-between px-4 py-2 border-b lg:py-4 dark:border-primary-darker text-2xl font-semibold"
+    <div
+      class="flex items-center justify-between px-4 py-2 border-b lg:py-4 dark:border-primary-darker"
     >
-      Dashboard
-    </h1>
+      <h1 class="text-2xl font-semibold">Dashboard</h1>
+      <button class="bg-primary-dark text-white px-3 py-3 rounded-xl">Add Tracker</button>
+    </div>
 
     <!-- Content -->
     <div>
@@ -154,6 +155,67 @@
                 />
               </svg>
             </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex bg-white py-3 rounded-xl flex-wrap">
+        <div class="w-full md:w-4/12">
+          <div class="p-2">
+            <div class="p-4 rounded-3xl bg-gray-900 text-white shadow-xl">
+              <div class="flex items-center justify-b">
+                <span class="text-sm">December 10, 2020</span>
+              </div>
+              <div class="mb-4 mt-5">
+                <p class="text-base font-bold opacity-70">Web Designing</p>
+                <p class="text-sm opacity-70 mt-2">Prototyping</p>
+              </div>
+              <div>
+                <p class="text-sm font-bold m-0">Progress</p>
+                <div class="w-full h-1 rounded-md overflow-hidden bg-white my-2 mx-0">
+                  <span
+                    class="block h-1 rounded-md bg-yellow-700"
+                    style="width: 90%"
+                  ></span>
+                </div>
+                <p class="text-right m-0 text-sm font-bold">90%</p>
+              </div>
+              <div class="flex justify-between pt-4 relative">
+                <div class="flex items-center">
+                  <img
+                    class="w-5 h-5 rounded-full overflow-hidden object-cover"
+                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2550&amp;q=80"
+                    alt="participant"
+                  /><img
+                    class="w-5 h-5 rounded-full overflow-hidden object-cover"
+                    src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbnxlbnwwfHwwfA%3D%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=900&amp;q=60"
+                    alt="participant"
+                  /><button
+                    class="w-5 h-5 rounded-full border-none ml-3 p-0 flex justify-center items-center bg-white"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-plus"
+                    >
+                      <path d="M12 5v14M5 12h14"></path>
+                    </svg>
+                  </button>
+                </div>
+                <div
+                  class="text-sm rounded-lg flex flex-shrink-0 py-2 px-4 font-bold text-yellow-600"
+                >
+                  2 Days Left
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
