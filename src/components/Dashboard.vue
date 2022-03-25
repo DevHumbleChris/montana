@@ -49,7 +49,6 @@
             </span>
           </div>
         </div>
-
         <!-- Users card -->
         <div
           class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker"
@@ -85,7 +84,6 @@
             </span>
           </div>
         </div>
-
         <!-- Orders card -->
         <div
           class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker"
@@ -121,7 +119,6 @@
             </span>
           </div>
         </div>
-
         <!-- Tickets card -->
         <div
           class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker"
