@@ -7,10 +7,28 @@
       class="flex items-center justify-between px-4 py-2 border-b lg:py-4 dark:border-primary-darker"
     >
       <h1 class="text-2xl font-semibold">Dashboard</h1>
-      <button class="bg-primary-dark text-white px-3 py-3 rounded-xl">
+      <label for="my-modal-3" class="btn modal-button">
         <FontAwesomeIcon :icon="['fas', 'plus']" class="mx-1" />
         Add Tracker
-      </button>
+      </label>
+    </div>
+    <!-- Modal -->
+    <div>
+      <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+      <div class="modal">
+        <div class="modal-box bg-white relative">
+          <label
+            for="my-modal-3"
+            class="btn bg-white btn-sm btn-circle text-red-900 absolute right-2 top-2"
+            >✕</label
+          >
+          <h3 class="text-lg font-bold my-1 text-center">Add Tracker</h3>
+          <p class="py-4">
+            You've been selected for a chance to get one year of subscription to use
+            Wikipedia for free!
+          </p>
+        </div>
+      </div>
     </div>
 
     <!-- Content -->
@@ -174,16 +192,12 @@
                   70%
                 </div>
                 <div class="mx-2">
-                  <p class="text-sm font-bold opacity-70">
-                    <span>23days </span>
-                    <span>24hrs </span>
-                    <span>2mins </span>
-                    <span>35secs</span>
-                  </p>
                   <p class="text-sm opacity-70 mt-2">December 20, 2034</p>
                 </div>
               </div>
-              <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+              <div
+                class="grid grid-flow-col flex flex-wrap justify-center gap-5 text-center auto-cols-max"
+              >
                 <div
                   class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content"
                 >
