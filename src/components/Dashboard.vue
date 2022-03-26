@@ -203,7 +203,7 @@
                 <div
                   class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content"
                 >
-                  <span class="countdown font-mono text-5xl">
+                  <span class="countdown font-mono text-3xl">
                     <span style="--value: 24"></span>
                   </span>
                   min
@@ -211,7 +211,7 @@
                 <div
                   class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content"
                 >
-                  <span class="countdown font-mono text-5xl">
+                  <span class="countdown font-mono text-3xl">
                     <span style="--value: 7"></span>
                   </span>
                   sec
