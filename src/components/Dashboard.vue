@@ -7,7 +7,10 @@
       class="flex items-center justify-between px-4 py-2 border-b lg:py-4 dark:border-primary-darker"
     >
       <h1 class="text-2xl font-semibold">Dashboard</h1>
-      <button class="bg-primary-dark text-white px-3 py-3 rounded-xl">Add Tracker</button>
+      <button class="bg-primary-dark text-white px-3 py-3 rounded-xl">
+        <FontAwesomeIcon :icon="['fas', 'plus']" class="mx-1" />
+        Add Tracker
+      </button>
     </div>
 
     <!-- Content -->
@@ -178,6 +181,40 @@
                     <span>35secs</span>
                   </p>
                   <p class="text-sm opacity-70 mt-2">December 20, 2034</p>
+                </div>
+              </div>
+              <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+                <div
+                  class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content"
+                >
+                  <span class="countdown font-mono text-3xl">
+                    <span style="--value: 15"></span>
+                  </span>
+                  days
+                </div>
+                <div
+                  class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content"
+                >
+                  <span class="countdown font-mono text-3xl">
+                    <span style="--value: 10"></span>
+                  </span>
+                  hours
+                </div>
+                <div
+                  class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content"
+                >
+                  <span class="countdown font-mono text-5xl">
+                    <span style="--value: 24"></span>
+                  </span>
+                  min
+                </div>
+                <div
+                  class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content"
+                >
+                  <span class="countdown font-mono text-5xl">
+                    <span style="--value: 7"></span>
+                  </span>
+                  sec
                 </div>
               </div>
             </div>
